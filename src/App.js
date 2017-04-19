@@ -4,10 +4,12 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 const App = (props) => (
   <Router>
     <div>
-      <Route path="/:page?/:subpage?" render={({match}) => (
+      <Route
+        path="/:a(\d{2}-\d{2}-\d{4}):b(\.[a-z]+)"
+        render={({match}) => (
           <h1>
-            Page: {match.params.page || 'Home'} <br/>
-            Subpage: {match.params.subpage}
+            paramA: {match.params.a} <br/>
+            paramB: {match.params.b}
           </h1>
         )} />
     </div>
