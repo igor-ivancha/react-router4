@@ -1,3 +1,6 @@
 a {
   margin-right: 1rem;
 }
+a.active {
+  color: red;
+}
